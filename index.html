@@ -812,6 +812,63 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
+		.policy-row {
+            grid-column: 1 / -1;
+            margin: 30px 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            background: rgba(159, 122, 234, 0.08);
+            border-radius: 80px;
+            padding: 20px 40px;
+            border: 1px solid rgba(159, 122, 234, 0.25);
+            backdrop-filter: blur(4px);
+        }
+
+        .policy-line {
+            font-size: 18px;
+            color: #cdd3f0;
+        }
+
+        .policy-line a {
+            color: #b38eff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .policy-line a:hover {
+            border-bottom-color: #b38eff;
+        }
+
+        .policy-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .policy-btn {
+            background: transparent;
+            border: 1px solid #4a4e74;
+            color: #e0e4f0;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s;
+            box-shadow: none;
+        }
+
+        .policy-btn:hover {
+            background: #9f7aea;
+            border-color: #9f7aea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(159, 122, 234, 0.3);
+        }
 
         /* ===== NEW FOOTER ===== */
         .footer-new {
@@ -910,7 +967,7 @@
         <a href="#contact">CONTACT</a>
     </div>
     <div class="nav-right">
-        <a href="#">LOGIN</a>
+        <a href="login.html">LOGIN</a>
         <a href="#" class="btn-glow">START FREE</a>
     </div>
 </nav>
@@ -924,7 +981,7 @@
             <p class="hero-sub">One workspace for conversations, files, and decisions. Built for teams that move fast.</p>
             <div class="hero-cta">
                 <button class="btn-glow" style="padding: 16px 42px;">Get started →</button>
-                <button class="btn-outline-light">Watch demo</button>
+                <button class="btn-outline-light">Book demo</button>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -1017,7 +1074,7 @@
             </div>
         </div>
         <div class="story-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='500' viewBox='0 0 600 500'%3E%3Crect width='600' height='500' fill='%232a2e45'/%3E%3Ctext x='100' y='250' fill='%239f7aea' font-size='24'%3ELeedsphere HQ%3C/text%3E%3C/svg%3E" alt="Leedsphere team">
+             <img src ="pic7.png" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
             <div class="image-badge">✨ Est. 2020 · Brooklyn, NY</div>
         </div>
     </div>
@@ -1066,7 +1123,7 @@
         <div class="collab-grid-new">
             <div class="collab-card-new">
                 <div class="collab-img">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%233a3f60'/%3E%3Ctext x='80' y='130' fill='%23fff' font-size='24'%3ECapsula%3C/text%3E%3C/svg%3E" alt="Capsula">
+                    <img src ="pic1.jpg" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 </div>
                 <div class="collab-content-new">
                     <span class="collab-tag-new">DESIGN</span>
@@ -1080,7 +1137,7 @@
             </div>
             <div class="collab-card-new">
                 <div class="collab-img">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%232f3a5a'/%3E%3Ctext x='50' y='130' fill='%23fff' font-size='24'%3EStretch Squared%3C/text%3E%3C/svg%3E" alt="Stretch Squared">
+                    <img src ="pic5.webp" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 </div>
                 <div class="collab-content-new">
                     <span class="collab-tag-new">TECH</span>
@@ -1094,7 +1151,7 @@
             </div>
             <div class="collab-card-new">
                 <div class="collab-img">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%233a3360'/%3E%3Ctext x='40' y='130' fill='%23fff' font-size='24'%3EFlaneur Mag%3C/text%3E%3C/svg%3E" alt="Flaneur">
+                     <img src ="pic6.jpg" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 </div>
                 <div class="collab-content-new">
                     <span class="collab-tag-new">MEDIA</span>
@@ -1119,19 +1176,19 @@
         </div>
         <div class="gallery-grid-new">
             <div class="gallery-item-new">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150' fill='%23fff'%3ETeam 2025%3C/text%3E%3C/svg%3E" alt="Team">
+                <img src ="off.png" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 <div class="gallery-overlay">Team offsite 2025</div>
             </div>
             <div class="gallery-item-new">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%234a3f60'/%3E%3Ctext x='30' y='150' fill='%23fff'%3EWorkshop%3C/text%3E%3C/svg%3E" alt="Workshop">
+              <img src ="pic1.jpg" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 <div class="gallery-overlay">Workshop with Capsula</div>
             </div>
             <div class="gallery-item-new">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23305a5a'/%3E%3Ctext x='40' y='150' fill='%23fff'%3ELaunch%3C/text%3E%3C/svg%3E" alt="Launch">
+               <img src ="pic3.webp" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 <div class="gallery-overlay">Product launch 2026</div>
             </div>
             <div class="gallery-item-new">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%235a3a5a'/%3E%3Ctext x='30' y='150' fill='%23fff'%3ERemote%3C/text%3E%3C/svg%3E" alt="Remote">
+                <img src ="pic4.webp" width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%233a405a'/%3E%3Ctext x='50' y='150'  >
                 <div class="gallery-overlay">Remote team meetup</div>
             </div>
         </div>
@@ -1260,48 +1317,40 @@
 <!-- NEW FOOTER -->
 <footer class="footer-new">
     <div class="container">
-        <div class="footer-grid-new">
+	    <div class="footer-grid-new">
             <div class="footer-brand">
                 <div class="logo" style="font-size:32px;">LEEDSPHERE✨</div>
                 <p>The workspace where teams collaborate like never before.</p>
             </div>
             <div class="footer-col-new">
                 <h4>Product</h4>
-                <ul>
-                    <li><a href="#">Channels</a></li>
-                    <li><a href="#">Messaging</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Integrations</a></li>
-                </ul>
+                <ul><li><a href="#">Channels</a></li><li><a href="#">Messaging</a></li></ul>
             </div>
             <div class="footer-col-new">
                 <h4>Solutions</h4>
-                <ul>
-                    <li><a href="#">Product Teams</a></li>
-                    <li><a href="#">Engineering</a></li>
-                    <li><a href="#">Remote</a></li>
-                    <li><a href="#">Enterprise</a></li>
-                </ul>
+                <ul><li><a href="#">Product Teams</a></li><li><a href="#">Remote</a></li></ul>
             </div>
             <div class="footer-col-new">
                 <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Updates</a></li>
-                </ul>
+                <ul><li><a href="#">Help Center</a></li><li><a href="#">Community</a></li></ul>
             </div>
             <div class="footer-col-new">
                 <h4>Company</h4>
-                <ul>
-                    <li><a href="#story">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
+                <ul><li><a href="#story">About</a></li><li><a href="#contact">Contact</a></li></ul>
             </div>
+
         </div>
+
+		   <!-- ************ ONE LINER + THREE BUTTONS ************ -->
+            <div class="policy-row">
+                <span class="policy-line">
+                    ⚖️ <a href="#" onclick="openTermsWindow(); return false;">Terms and Conditions</a> — one click away
+                </span>
+                <div class="policy-buttons">
+                    <button class="policy-btn" onclick="openRefundWindow()">Refund Policy</button>
+                    <button class="policy-btn" onclick="openPrivacyWindow()">Privacy Policy</button>
+                </div>
+            </div>
         <div class="footer-bottom-new">
             <div>© 2026 Leedsphere. All rights reserved.</div>
             <div class="social-links">
@@ -1312,6 +1361,165 @@
         </div>
     </div>
 </footer>
+<script>
 
+    // ---- TERMS OF SERVICE ----
+    function openTermsWindow() {
+        const termsContent = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Leedsphere · Terms of Service</title>
+            <style>
+            body { background:#0b0c15; color:#e0e4f0; font-family: Inter, sans-serif; padding: 40px; max-width: 1000px; margin:0 auto; line-height:1.6; }
+            h2, h3 { color:#b38eff; } 
+            hr { border:1px solid #2a2e45; }
+            </style>
+            </head>
+            <body>
+            <h2>📋 Leedsphere Terms of Service</h2>
+            <p><strong>Last Updated: January 2, 2026</strong></p>
+            <hr>
+
+            <h3>1. WHO WE ARE</h3>
+            <p>Leedsphere (“Leedsphere”, “we”, “us”, “our”) operates the Service, which is a cloud-based Leedsphere platform available at leedsphere.com.<br>
+            Email: admin@leedsphere.com<br>
+            Address: 476/42 Dhan Nadi, Vijay Singh Pathik Nagar, Ajmer, Rajasthan 305001, India<br>
+            For certain transactions, payments are processed by Paddle as our Merchant of Record.</p>
+
+            <h3>2. ELIGIBILITY AND ACCOUNTS</h3>
+            <p><strong>Business Use Only:</strong> The Service is intended for businesses and professionals only.<br>
+            <strong>Account Responsibility:</strong> You must provide accurate information and are responsible for your login credentials and Authorized Users.</p>
+
+            <h3>3. SERVICE LICENSE AND USE</h3>
+            <p>Subject to payment and compliance, Leedsphere grants you a limited, non-exclusive license to use the Service for internal business purposes.
+            You must not violate laws, upload harmful content, reverse engineer the platform, bypass security, or build a competing product.</p>
+
+            <h3>4. YOUR DATA AND PRIVACY</h3>
+            <p>You retain ownership of your Customer Data. You grant Leedsphere permission to process it to provide and improve the Service. Data handling follows our Privacy Policy.</p>
+
+            <h3>5. SERVICE AVAILABILITY</h3>
+            <p>We aim for reliable service but do not guarantee uninterrupted access. Features may be updated or modified.</p>
+
+            <h3>6. FEES, PAYMENTS, AND BILLING</h3>
+            <p>Subscriptions may be monthly or annual and auto-renew unless canceled. Payments may be processed by Paddle. Refunds follow our Refund Policy.</p>
+
+            <h3>7. INTELLECTUAL PROPERTY</h3>
+            <p>The Service and all related software and materials are owned by Leedsphere. Feedback may be used without compensation.</p>
+
+            <h3>8. TERMINATION</h3>
+            <p>We may suspend or terminate accounts for non-payment, policy violations, or abuse. Upon termination, access stops and data may be deleted after a reasonable period.</p>
+
+            <h3>9. DISCLAIMERS</h3>
+            <p>The Service is provided "as is" without warranties of uninterrupted or error-free performance.</p>
+
+            <h3>10. LIMITATION OF LIABILITY</h3>
+            <p>Liability is limited to fees paid in the previous 12 months, to the maximum extent permitted by law.</p>
+
+            <h3>11. GOVERNING LAW</h3>
+            <p>These Terms are governed by the laws of India. Courts of Rajasthan have jurisdiction.</p>
+
+            <h3>12. CONTACT</h3>
+            <p>Email: admin@leedsphere.com<br>
+            Address: Ajmer, Rajasthan, India</p>
+
+            <hr>
+            <p><em>END OF TERMS OF SERVICE – Effective January 2, 2026</em></p>
+            </body></html>
+        `;
+
+        const win = window.open('', '_blank', 'width=900,height=700,scrollbars=yes,resizable=yes');
+        win.document.write(termsContent);
+        win.document.close();
+    }
+
+
+    // ---- REFUND POLICY ----
+    function openRefundWindow() {
+        const refundContent = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Leedsphere · Refund Policy</title>
+            <style>
+            body{background:#0b0c15; color:#e0e4f0; font-family:Inter, sans-serif; padding:40px; max-width:1000px; margin:0 auto;}
+            h2{color:#b38eff;}
+            </style>
+            </head>
+            <body>
+
+            <h2>💸 Refund Policy</h2>
+            <p><strong>Last Updated: January 2, 2026</strong></p>
+            <hr>
+
+            <h3>1. 30-Day Money-Back Guarantee</h3>
+            <p>You may request a refund within 30 days of your initial purchase. Applies to monthly and annual subscriptions.</p>
+
+            <h3>2. Exceptions</h3>
+            <p>Refunds may be issued for billing errors, prolonged service failure (7+ days), or legal requirements.</p>
+
+            <h3>3. Non-Refundable Items</h3>
+            <p>Custom services, consulting, used professional services, and taxes already remitted are non-refundable.</p>
+
+            <h3>4. How to Request</h3>
+            <p>Email admin@leedsphere.com with subject "Refund Request" including account and transaction details.</p>
+
+            <h3>5. Cancellation</h3>
+            <p>You may cancel anytime. Cancellation applies to future billing periods only.</p>
+
+            <hr>
+            <p><em>END OF REFUND POLICY – Effective January 2, 2026</em></p>
+            </body></html>
+        `;
+
+        const win = window.open('', '_blank', 'width=900,height=700,scrollbars=yes,resizable=yes');
+        win.document.write(refundContent);
+        win.document.close();
+    }
+
+
+    // ---- PRIVACY POLICY ----
+    function openPrivacyWindow() {
+        const privacyContent = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Leedsphere · Privacy Policy</title>
+            <style>
+            body{background:#0b0c15; color:#e0e4f0; font-family:Inter, sans-serif; padding:40px; max-width:1000px; margin:0 auto;}
+            h2{color:#b38eff;}
+            </style>
+            </head>
+            <body>
+
+            <h2>🔐 Privacy Policy</h2>
+            <p><strong>Last Updated: January 2, 2026</strong></p>
+            <hr>
+
+            <h3>1. Information We Collect</h3>
+            <p>Account details, billing information (processed by Paddle), usage data, and Leedsphere data you upload.</p>
+
+            <h3>2. How We Use Data</h3>
+            <p>To provide services, process payments, improve platform performance, ensure security, and communicate updates.</p>
+
+            <h3>3. Data Sharing</h3>
+            <p>We do not sell personal data. We may share with payment processors, hosting providers, or legal authorities when required.</p>
+
+            <h3>4. Data Retention</h3>
+            <p>Account data retained while active. Billing data retained for legal compliance. Leedsphere data deleted after termination.</p>
+
+            <h3>5. Your Rights</h3>
+            <p>You may request access, correction, or deletion of your data by contacting admin@leedsphere.com.</p>
+
+            <h3>6. Security</h3>
+            <p>We use encryption and access controls to protect data, but no system is 100% secure.</p>
+
+            <hr>
+            <p><em>END OF PRIVACY POLICY – Effective January 2, 2026</em></p>
+            </body></html>
+        `;
+
+        const win = window.open('', '_blank', 'width=900,height=700,scrollbars=yes,resizable=yes');
+        win.document.write(privacyContent);
+        win.document.close();
+    }
+</script>
 </body>
 </html>
