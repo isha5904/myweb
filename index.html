@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leedsphere · Reimagined</title>
+    <title>Zentivora · Reimagined</title>
     <style>
         /* ===== COMPLETELY NEW DESIGN ===== */
         * {
@@ -44,13 +44,27 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #9f7aea, #6b8cff, #48cae4);
+         .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 75px;
+            height: 75px;
+            border-radius: 30%;
+            border: 1px solid #00f2ff;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f2ff, #0072ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.02em;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -952,13 +966,53 @@
                 gap: 20px;
             }
         }
+        /* ===== TERMS MODAL ===== */
+        .terms-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(3,6,15,0.6);
+            z-index: 2000;
+            padding: 30px;
+        }
+        .terms-modal.open { display: flex; }
+        .terms-modal-content {
+            max-width: 980px;
+            width: 100%;
+            max-height: 85vh;
+            overflow: auto;
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius: 20px;
+            border: 1px solid rgba(159,122,234,0.12);
+            padding: 28px;
+            color: #e8e9f0;
+            box-shadow: 0 30px 60px rgba(3,6,15,0.7);
+        }
+        .terms-modal .close-x {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            background: transparent;
+            border: none;
+            color: #cbd3ff;
+            font-size: 22px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
 <!-- NEW NAVIGATION -->
 <nav class="navbar">
-    <div class="logo">LEEDSPHERE✨</div>
+	
+	<a href="#" class="logo-container">
+        <img src="LOGO.PNG" alt="Zentivora Logo" class="logo-img">
+        <div class="logo-text">ZENTIVORA TECH</div>
+    </a>
+	
+	
     <div class="nav-links">
         <a href="#home">HOME</a>
         <a href="#story">STORY</a>
@@ -1053,7 +1107,7 @@
     <div class="container story-grid">
         <div class="story-content">
             <h2>From a small team to a global movement</h2>
-            <p>Leedsphere started in 2020 with a simple idea: work shouldn't feel chaotic. Built by engineers and designers who craved flow, our platform quickly became the secret weapon for teams that want to move faster, together.</p>
+            <p>Zentivora started in 2020 with a simple idea: work shouldn't feel chaotic. Built by engineers and designers who craved flow, our platform quickly became the secret weapon for teams that want to move faster, together.</p>
             <div class="story-highlight">
                 <p style="font-size: 22px; font-style: italic;">"We built what we wished existed — a workspace that actually feels good to use."</p>
                 <p style="color:#9f7aea; margin-top:15px;">— Alex Morgan, Co-founder</p>
@@ -1128,7 +1182,7 @@
                 <div class="collab-content-new">
                     <span class="collab-tag-new">DESIGN</span>
                     <h4>Capsula Studio</h4>
-                    <p>50-person creative team using Leedsphere for real-time feedback.</p>
+                    <p>50-person creative team using Zentivora for real-time feedback.</p>
                     <div class="collab-meta-new">
                         <span>📍 NYC</span>
                         <span>Since 2023</span>
@@ -1171,7 +1225,7 @@
 <section class="gallery-new">
     <div class="container">
         <div class="section-header">
-            <h2>Life at Leedsphere</h2>
+            <h2>Life at Zentivora</h2>
             <p>Moments from our team and collaborations</p>
         </div>
         <div class="gallery-grid-new">
@@ -1205,7 +1259,7 @@
         <div class="testimonial-grid-new">
             <div class="testimonial-card-new">
                 <div class="quote-icon">"</div>
-                <div class="quote">Leedsphere transformed how our creative team collaborates. It's the only tool where everything just flows.</div>
+                <div class="quote">Zentivora transformed how our creative team collaborates. It's the only tool where everything just flows.</div>
                 <div class="author-new">
                     <div class="author-avatar-new">MC</div>
                     <div class="author-info-new">
@@ -1265,7 +1319,7 @@
                     <div class="contact-icon-new">📧</div>
                     <div class="contact-text-new">
                         <h4>Email</h4>
-                        <p>hello@leedsphere.com</p>
+                        <p>hello@Zentivora.com</p>
                     </div>
                 </div>
                 <div class="contact-item-new">
@@ -1341,10 +1395,10 @@
 
         </div>
 
-		   <!-- ************ ONE LINER + THREE BUTTONS ************ -->
+           <!-- ONE LINER + LINKS -->
             <div class="policy-row">
                 <span class="policy-line">
-                    ⚖️ <a href="#" onclick="openTermsWindow(); return false;">Terms and Conditions</a> — one click away
+                    ⚖️ <a href="#" onclick="openTermsModal(); return false;">Terms and Conditions (popup)</a> — <a href="terms.html">Open full page</a>
                 </span>
                 <div class="policy-buttons">
                     <button class="policy-btn" onclick="openRefundWindow()">Refund Policy</button>
@@ -1361,7 +1415,40 @@
         </div>
     </div>
 </footer>
+
+<!-- TERMS POPUP MARKUP -->
+<div id="termsModal" class="terms-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="terms-modal-content" id="termsModalContent" tabindex="0">
+        <button class="close-x" aria-label="Close" onclick="closeTermsModal()">✕</button>
+        <div id="termsInner">Loading…</div>
+    </div>
+</div>
+
 <script>
+
+    // ---- TERMS MODAL (fetches terms.html) ----
+    function openTermsModal() {
+        const modal = document.getElementById('termsModal');
+        const inner = document.getElementById('termsInner');
+        inner.innerHTML = 'Loading…';
+        fetch('terms.html')
+            .then(r => { if (!r.ok) throw new Error('Network response not ok'); return r.text(); })
+            .then(html => {
+                inner.innerHTML = html;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.getElementById('termsModalContent').focus();
+            })
+            .catch(() => { inner.innerHTML = '<p>Unable to load Terms. <a href="terms.html">Open full page</a></p>'; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); });
+    }
+
+    function closeTermsModal() {
+        const modal = document.getElementById('termsModal');
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTermsModal(); });
 
     // ---- TERMS OF SERVICE ----
     function openTermsWindow() {
